@@ -9,6 +9,6 @@ runs:
       run: node ${{ github.action_path }}/dist/index.mjs
       shell: sh
     - name: Setup TeX Live
-      uses: TeX-Live/setup-texlive-action@v3
+      uses: zauguin/install-texlive@v4
       with:
         packages: ${{ steps.read-dtmgr.outputs.dtmgr_packages_list }}
