@@ -8,7 +8,7 @@ Installs the packages in `dtmgr.toml` in a global TeX Live install.
 
 ```
 - name: Set up TeX Live
-  uses: s5bug/dtmgr-action@024de18a30aa474f88f9d8f4a527e56f645c10b7
+  uses: s5bug/dtmgr-action@5cc1d4582451d522d597f62ace02b486ba2a993d
 ```
 
 ## development
