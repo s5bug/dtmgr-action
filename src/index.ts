@@ -1,10 +1,10 @@
 import * as core from '@actions/core'
 import fs from 'fs/promises'
-import TOML, {type TomlValue} from 'smol-toml'
+import * as smoltoml from 'smol-toml'
 
 fs.readFile(`${process.env.GITHUB_WORKSPACE}/dtmgr.toml`).then(result => {
-  const toml = TOML.parse(result.toString())
-  const depList: TomlValue = toml['dependencies']
+  const toml = smoltoml.parse(result.toString())
+  const depList: smoltoml.TomlValue = toml['dependencies']
   if(!Array.isArray(depList)) {
     core.setFailed("dependencies not a list")
     return
